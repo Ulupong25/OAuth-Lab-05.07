@@ -1,0 +1,18 @@
+i. What happens when a user accesses /profile without logging in?
+
+The application checks the session for a 'user' key. If it is not found, the server denies access and returns an "Unauthorized" message with a 401 status code.  
+
+ii. What data is returned after successful login?
+
+The application returns a JSON object containing your public GitHub profile data, such as your username (login), user ID, avatar URL, and profile link.  
+
+iii. Why is OAuth considered more secure than traditional login?
+OAuth uses Access Tokens instead of sharing the user's actual password with the application. This means the app never sees or stores your GitHub credentials, and access can be revoked at any time without changing your password.  
+
+iv. What challenges did you encounter?
+
+The main challenges included resolving SyntaxErrors caused by mismatched quotes and improper indentation within the oauth.register function. There was also a need to ensure the redirect URI in the GitHub settings matched the local environment precisely.  
+
+v. What did you learn from this activity?
+
+I learned how to implement the OAuth 2.0 Authorization Code Flow, manage user sessions to secure specific routes, and integrate a third-party identity provider (GitHub) into a web application.  
